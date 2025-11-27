@@ -6,7 +6,7 @@ function Users() {
     const [users, setusers] = useState([])
 
     useEffect(() => {
-        axios.get(`${api_url}http://localhost:8000/`)
+        axios.get(`${api_url}`)
             .then(result => {
                 setusers(result.data)
                 // console.log(result.data);
@@ -14,7 +14,7 @@ function Users() {
             .catch(err => console.log(err))
     }, [])
     const handleDelete = (id) => {
-        axios.delete(`${api_url}http://localhost:8000/deleteUser/` + id)
+        axios.delete(`${api_url}` + id)
             .then(res => {
                 console.log(res)
                 window.location.reload()
