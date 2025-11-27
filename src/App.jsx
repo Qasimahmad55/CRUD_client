@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 // import './App.css'
 import Users from './Users'
 import CreateUser from './CreateUser'
-import UpdateUser from './updateUser'
+import UpdateUser from './UpdateUser'
 function App() {
 
   return (
