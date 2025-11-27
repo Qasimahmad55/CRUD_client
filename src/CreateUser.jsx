@@ -9,7 +9,7 @@ function CreateUser() {
     const navigate = useNavigate()
     const submit = (e) => {
         e.preventDefault()
-        axios.post(`${api_url}`, { name, email, age })
+        axios.post(`${api_url}createuser`, { name, email, age })
             .then(res => {
                 console.log(res)
                 navigate("/")

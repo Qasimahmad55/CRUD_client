@@ -10,7 +10,7 @@ function UpdateUser() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        axios.get(`${api_url}` + id)
+        axios.get(`${api_url}getUser/${id}`)
             .then(result => {
                 // console.log(result)
                 setName(result.data.name)
@@ -21,7 +21,7 @@ function UpdateUser() {
     }, [])
     const submit = (e) => {
         e.preventDefault()
-        axios.patch(`${api_url}` + id, { name, email, age })
+        axios.patch(`${api_url}updateUser/${id}`, { name, email, age })
             .then(result => {
                 console.log(result)
                 navigate("/")

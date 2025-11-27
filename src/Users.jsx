@@ -14,7 +14,7 @@ function Users() {
             .catch(err => console.log(err))
     }, [])
     const handleDelete = (id) => {
-        axios.delete(`${api_url}` + id)
+        axios.delete(`${api_url}deleteUser/${id}`)
             .then(res => {
                 console.log(res)
                 window.location.reload()
